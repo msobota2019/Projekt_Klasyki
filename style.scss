@@ -1,0 +1,82 @@
+html{
+    height: 10%;
+    padding-top: 2%;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: rgb(87, 77, 77);
+    height: 100%;
+}
+.container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 2fr;
+  grid-template-rows: 1fr 1fr 3fr;
+  grid-template-areas: "head"
+                        "nav"
+                        "art";
+                        
+}
+
+.head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__tytul{
+        text-align: center;
+        color: orange;
+
+    }
+
+    &__menu{
+        grid-area: nav;
+
+        &__lista{
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            list-style-type: none;
+            &__podstrona{
+                color: orange;
+                outline: none;
+            }
+        }
+        
+    }
+
+}
+
+
+.art{
+    display: flex;
+    justify-content: center;
+    grid-area: art;
+    gap: 100px;
+    background-color: rgb(48, 45, 45);
+    height: 200%;
+    &__sekcja{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        margin-left: 4px;
+        margin-right: 4px;
+        width: 100%;
+        border: solid rgb(0, 0, 0) 2px;
+        border-radius: 2px;
+        &__nazwa{
+            font-size: large;
+            margin-top: 20px;
+            color: white;
+        }
+
+        &__tekst{
+            text-align: center;
+            color: white;
+        }
+
+
+    }
+}    
